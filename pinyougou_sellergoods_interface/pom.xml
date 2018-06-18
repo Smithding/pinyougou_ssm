@@ -28,6 +28,8 @@
             <artifactId>junit</artifactId>
             <scope>test</scope>
         </dependency>
+
+
         <dependency>
             <groupId>com.pinyougou</groupId>
             <artifactId>pinyougou_common</artifactId>

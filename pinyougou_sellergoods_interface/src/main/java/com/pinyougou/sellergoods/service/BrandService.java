@@ -1,66 +1,71 @@
 package com.pinyougou.sellergoods.service;
+import java.util.List;
+import java.util.Map;
 
 import com.pinyougou.entity.PageResult;
 import com.pinyougou.pojo.TbBrand;
 
-import java.util.List;
 
 /**
- * @author 三国的包子
- * @version 1.0
- * @description 描述
- * @title 标题
- * @date 2018/6/14
- * @package com.pinyougou.sellergoods.service
- * @company www.itheima.com
+ * 服务层接口
+ * @author Administrator
+ *
  */
 public interface BrandService {
-    /**
-     * 返回所有的品牌列表
-     * @return
-     */
-    List<TbBrand> getBranList();
 
-    /**
-     * 分页查询
-     * @param pageNum
-     * @param pageSize
-     * @return
-     */
-    public PageResult findPage(int pageNum,int pageSize);
+	/**
+	 * 返回全部列表
+	 * @return
+	 */
+	public List<TbBrand> findAll();
+	
+	
+	/**
+	 * 返回分页列表
+	 * @return
+	 */
+	public PageResult findPage(int pageNum, int pageSize);
+	
+	
+	/**
+	 * 增加
+	*/
+	public void add(TbBrand brand);
+	
+	
+	/**
+	 * 修改
+	 */
+	public void update(TbBrand brand);
+	
 
-    /**
-     * 新增
-     * @param tbBrand
-     */
-    public void add(TbBrand tbBrand);
+	/**
+	 * 根据ID获取实体
+	 * @param id
+	 * @return
+	 */
+	public TbBrand findOne(Long id);
+	
+	
+	/**
+	 * 批量删除
+	 * @param ids
+	 */
+	public void delete(Long[] ids);
 
-    /**
-     * 修改保存
-     * @param tbBrand
-     */
-    public void update(TbBrand tbBrand);
+	/**
+	 * 分页
+	 * @param pageNum 当前页 码
+	 * @param pageSize 每页记录数
+	 * @return
+	 */
+	public PageResult findPage(TbBrand brand, int pageNum, int pageSize);
 
-    /**
-     * 修改请求id
-     * @param id
-     * @return
-     */
-    public TbBrand findOne(Long id);
 
-    /**
-     * 批量删除
-     * @param ids
-     */
-    public void findatect(Long[] ids);
+	/**
+	 * 品牌下拉框数据
+	 */
+	List<Map> selectOptionList();
 
-    /**
-     * 根据名称查询
-     * @param brand
-     * @param page
-     * @param size
-     * @return
-     */
-    public PageResult findPage(TbBrand brand,int page,int size);
 
 }

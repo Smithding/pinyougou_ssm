@@ -1,5 +1,6 @@
 package com.pinyougou.mapper;
 
+import com.pinyougou.entity.Goods;
 import com.pinyougou.pojo.TbGoods;
 import com.pinyougou.pojo.TbGoodsExample;
 import java.util.List;

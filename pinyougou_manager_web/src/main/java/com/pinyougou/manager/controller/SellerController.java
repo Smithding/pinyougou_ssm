@@ -5,6 +5,7 @@ import com.pinyougou.entity.PageResult;
 import com.pinyougou.entity.Result;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.pinyougou.pojo.TbSeller;
@@ -17,6 +18,7 @@ import com.pinyougou.sellergoods.service.SellerService;
  *
  */
 @RestController
+@ResponseBody
 @RequestMapping("/seller")
 public class SellerController {
 
@@ -73,18 +75,18 @@ public class SellerController {
 			return new Result(false, "修改失败");
 		}
 	}	
-	/*
-	*//**
+
+	/**
 	 * 获取实体
 	 * @param id
 	 * @return
-	 *//*
+	 */
 	@RequestMapping("/findOne")
 	public TbSeller findOne(String id){
 		return sellerService.findOne(id);		
 	}
 	
-	*//**
+/*	*//**
 	 * 批量删除
 	 * @param ids
 	 * @return
@@ -102,7 +104,7 @@ public class SellerController {
 	
 		/**
 	 * 查询+分页
-	 * @param brand
+	 * @param
 	 * @param page
 	 * @param rows
 	 * @return
@@ -111,5 +113,24 @@ public class SellerController {
 	public PageResult search(@RequestBody TbSeller seller, int page, int rows  ){
 		return sellerService.findPage(seller, page, rows);		
 	}
-	
+
+
+	/**
+	 * 更改状态
+	 * @paramsellerId商家ID
+	 * @param status 状态
+	 */
+	@RequestMapping("/updateStatus")
+
+	public Result updateStatus(String sellerId, String status){
+		try {
+			sellerService.updateStatus(sellerId, status);
+			return new Result(true, "成功");
+		} catch (Exception e) {
+			e.printStackTrace();
+			return new Result(false, "失败");
+		}
+	}
+
+
 }

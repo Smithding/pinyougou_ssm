@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/pinyougou-content-service" />
+    <file type="web" url="file://$PROJECT_DIR$/pinyougou-portal-web" />
+    <file type="web" url="file://$PROJECT_DIR$/pinyougou_content_service" />
     <file type="web" url="file://$PROJECT_DIR$/pinyougou_manager_web" />
+    <file type="web" url="file://$PROJECT_DIR$/pinyougou_portal_web" />
     <file type="web" url="file://$PROJECT_DIR$/pinyougou_sellergoods_service" />
+    <file type="web" url="file://$PROJECT_DIR$/pinyougou_shop_web" />
     <type id="Spring" />
   </component>
   <component name="MavenProjectsManager">
@@ -14,12 +19,19 @@
         <option value="$PROJECT_DIR$/pinyougou_dao/pom.xml" />
         <option value="$PROJECT_DIR$/pinyougou_sellergoods_interface/pom.xml" />
         <option value="$PROJECT_DIR$/pinyougou_sellergoods_service/pom.xml" />
+        <option value="$PROJECT_DIR$/pinyougou_shop_web/pom.xml" />
         <option value="$PROJECT_DIR$/pinyougou_manager_web/pom.xml" />
+        <option value="$PROJECT_DIR$/pinyougou-content-service/pom.xml" />
+        <option value="$PROJECT_DIR$/pinyougou-content-interface/pom.xml" />
+        <option value="$PROJECT_DIR$/pinyougou_content_interface/pom.xml" />
+        <option value="$PROJECT_DIR$/pinyougou_content_service/pom.xml" />
+        <option value="$PROJECT_DIR$/pinyougou-portal-web/pom.xml" />
+        <option value="$PROJECT_DIR$/pinyougou_portal_web/pom.xml" />
         <option value="$PROJECT_DIR$/pinyougou_common/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
